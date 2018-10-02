@@ -3,17 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
-    "dev": "ENV=DEBUG && node index.js",
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
+  },
+  "repository": "ashinzekene/",
+  "bin": {
+    "gt-wifi": "index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "commander": "^2.18.0",
-    "dotenv": "^6.0.0",
     "locate-chrome": "^0.1.1",
     "puppeteer-core": "^1.8.0"
   }
