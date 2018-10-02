@@ -1,0 +1,20 @@
+{
+  "name": "gt-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ENV=DEBUG && node index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.18.0",
+    "dotenv": "^6.0.0",
+    "locate-chrome": "^0.1.1",
+    "puppeteer-core": "^1.8.0"
+  }
+}
