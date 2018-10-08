@@ -4,6 +4,8 @@ const puppeteer = require('puppeteer-core');
 const locateChrome = require('locate-chrome');
 const url = 'http://detectportal.firefox.com/success.txt';
 
+// const url = 'http://gstatic.com/generate_204';
+
 const screenshot = require('./screenshot');
 const button_selector = 'a[href="/wordpress/registrationpage/"]';
 
@@ -28,6 +30,7 @@ const close = async (page, fail) => {
     await page.goto(url);
   } catch (err) {
     console.log('⛔ It looks like you are offline');
+    console.log(err);
     await close(page, true);
   }
 
@@ -39,7 +42,7 @@ const close = async (page, fail) => {
     console.log('⛔ You\'re either not connected to GT_WiFi or you have already logged in');
     await close(page, true);
   }
-  console.log('🖋 Chill... Logging you in');
+  console.log('🖋  Chill... Logging you in');
   page.waitForNavigation({ waitUntil: 'domcontentloaded' })
 
   // Submit form
